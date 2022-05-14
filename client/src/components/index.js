@@ -1,5 +1,13 @@
 import Navigation from "./Navigation";
+import Landing from "./Landing";
+import Footer from "./Footer";
+import Login from "./Login";
+import Logout from "./Logout";
 
 export {
-    Navigation
+    Navigation,
+    Landing,
+    Footer,
+    Login,
+    Logout
 };
