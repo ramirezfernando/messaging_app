@@ -7,15 +7,7 @@ const clientId = '40905900314-8thciv5blalp0662ukqke1ibqekqap75.apps.googleuserco
 
 
 export default function Chat() {
-    useEffect(() => {
-        function start() {
-            gapi.client.init({
-                clientId: clientId,
-                scope: ""
-            })
-        };
-        gapi.load('client:auth2', start)
-    })
+ 
   return (
     <div>chat
 
