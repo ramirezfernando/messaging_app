@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import Popup from './Popup/Popup';
+import { signInWithGoogle } from '../Firebase';
 
 // Material UI
 import AppBar from '@mui/material/AppBar';
@@ -13,8 +13,7 @@ import Image from 'react-image-resizer';
 
 export default function Navigation() {
 
-    // popup state
-    const [buttonPopup, setButtonPopup] = useState(false);
+
 
 
   return (
@@ -29,10 +28,8 @@ export default function Navigation() {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           UH Chat
         </Typography>
-        <Button onClick={() => setButtonPopup(true)} variant="text" color='error' >Login</Button>
-        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-
-        </Popup>
+        <Button onClick={signInWithGoogle} variant="text" color='error' >Login</Button>
+        
       </Toolbar>
     </AppBar>
     </Box>

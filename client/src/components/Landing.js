@@ -1,10 +1,7 @@
 import React from 'react';
 //import Popup from './Popup/Popup';
-import LoginButton from './Login';
-import { useEffect } from 'react';
-import { useState } from 'react';
-import { gapi } from 'gapi-script';
-import Popup from 'react-animated-popup'
+
+import { signInWithGoogle } from '../Firebase';
 
 
 import Box from '@mui/material/Box';
@@ -13,9 +10,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import {Button} from '@mui/material';
-import Radium, { StyleRoot } from 'radium';
 import Image from 'react-image-resizer'
-const clientId = '40905900314-8thciv5blalp0662ukqke1ibqekqap75.apps.googleusercontent.com'
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -83,18 +78,7 @@ function Landing() {
 
     }, 
 };
-    // popup state
-    const [visible, setVisible] = useState(false);
-    // google log in
-    useEffect(() => {
-        function start() {
-            gapi.client.init({
-                clientId: clientId,
-                scope: ""
-            })
-        };
-        gapi.load('client:auth2', start)
-    })
+
 
   return (
    <Box sx={{ flexGrow: 1 }} mb={30}>
@@ -109,26 +93,16 @@ function Landing() {
                     UH Chat makes it easy to connect with other students at The University of Houston.
                 </Typography>
 
-                <Button onClick={() => setVisible(true)} variant="contained" size="large" style={{ background: '#C7112F'}}>login</Button>
+                <Button onClick={ signInWithGoogle } variant="contained" size="large" style={{ background: '#C7112F'}}>login</Button>
                 
-                <Popup visible={visible} onClose={() => setVisible(false)}>
-                    <h2> Sign in to </h2>
-                    <Image
-                        img src={'/uhchat.png'} alt="uh-chat" class="center"
-                        height={80}
-                        width={100}
-                    />
-                    <LoginButton/>
-                </Popup>
+               
 
             </Item>
            
         </Grid>
         <Grid item xs='16' md={8}>
             <Item elevation={0}>
-                <StyleRoot>
                     <img src="/connect.svg" style={img} alt="students" />
-                </StyleRoot>
             </Item>
         </Grid>
 
@@ -136,4 +110,4 @@ function Landing() {
     </Box>
   )
 }
-export default Radium(Landing)
+export default Landing;

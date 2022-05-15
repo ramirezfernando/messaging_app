@@ -1,6 +1,5 @@
 import React from 'react';
 import { Navigation, Footer, Landing } from '../components';
-import Radium, { StyleRoot } from 'radium';
 
 function Home() {
 
@@ -34,15 +33,13 @@ function Home() {
 };
 
   return (
-    <StyleRoot>
       <div style={homepage}>
       <Navigation />
       <Landing />
       <Footer />
       </div>
-    </StyleRoot>
   
 
   )
 }
-export default Radium(Home);
+export default Home;
