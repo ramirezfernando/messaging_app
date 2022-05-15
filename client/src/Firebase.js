@@ -24,10 +24,22 @@ const analytics = getAnalytics(app);
 
 // Google Authorization
 export const auth = getAuth(app);
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+
+      // ...
+    } else {
+
+    }
+  });
+
+
 const googleProvider = new GoogleAuthProvider();
 
 // We can use this everywhere in our react app without the need of props
 export const AuthContext = createContext()
+
 export const AuthContextProvider = props => {
     const [user, setUser] = useState();
     const [error, setError] = useState();
