@@ -18,7 +18,7 @@ export default function SearchBar() {
       options={options.sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter))}
       groupBy={(option) => option.firstLetter}
       getOptionLabel={(option) => option.title}
-      sx={{ width: 'auto' }}
+      sx={{ width: 'auto', height: 'auto' }}
       renderInput={(params) => <TextField {...params} label="Search" />}
     />
   );

@@ -27,10 +27,7 @@ export const auth = getAuth(app);
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
-
-      // ...
     } else {
-
     }
   });
 
@@ -61,6 +58,7 @@ export const signInWithGoogle = () => {
         const name = result.user.displayName;
         const email = result.user.email;
         const profilePicture = result.user.photoURL;
+        
         localStorage.setItem("name", name);
         localStorage.setItem("email", email);
         localStorage.setItem("profilePicture", profilePicture);

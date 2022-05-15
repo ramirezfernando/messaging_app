@@ -1,5 +1,5 @@
 import React from 'react'
-import { signInWithGoogle } from '../Firebase';
+import { signInWithGoogle } from '../../Firebase';
 import { Link } from 'react-router-dom'
 // Material UI
 import AppBar from '@mui/material/AppBar';

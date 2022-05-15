@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Landing.css';
-import { signInWithGoogle } from '../../Firebase';
+import { signInWithGoogle } from '../../../Firebase';
 
 // Material UI
 import Box from '@mui/material/Box';
