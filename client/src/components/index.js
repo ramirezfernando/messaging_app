@@ -1,5 +1,5 @@
 import Navigation from "./Navigation";
-import Landing from "./Landing";
+import Landing from "./Landing/Landing";
 import Footer from "./Footer";
 
 
