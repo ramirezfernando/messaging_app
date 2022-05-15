@@ -24,9 +24,9 @@ const Item = styled(Paper)(({ theme }) => ({
   return (
    <Box sx={{ flexGrow: 1 }} mb={30}>
       <Grid container spacing={2} columns={16} alignItems='center' justify='center' mt={4}>
-        <Grid item xs='16' md={8}>
-            <Item elevation={0} p={2}>
-                <h1 className='bold-red-text' m={2} variant="h1">
+        <Grid item xs='16' md={8} mb={4}>
+            <Item elevation={0} p={1}>
+                <h1 className='bold-red-text' variant="h1">
                     Connect with 
                     UH students
                 </h1>

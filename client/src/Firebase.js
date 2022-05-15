@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext, createContext } from "react";
+import { Link } from 'react-router-dom'
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, 
@@ -58,4 +59,5 @@ export const signInWithGoogle = () => {
 };
 export const signOutWithGoogle = async () => {
     await signOut(auth);
+    console.log("Signed out");
 };

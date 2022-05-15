@@ -1,7 +1,6 @@
 import React from 'react'
-import { useState } from 'react';
 import { signInWithGoogle } from '../Firebase';
-
+import { Link } from 'react-router-dom'
 // Material UI
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -29,7 +28,6 @@ export default function Navigation() {
           UH Chat
         </Typography>
         <Button onClick={signInWithGoogle} variant="text" color='error' >Login</Button>
-        
       </Toolbar>
     </AppBar>
     </Box>
